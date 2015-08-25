@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "BMapKit.h"
 
-@interface AppDelegate ()
+@interface AppDelegate (){
+
+    BMKMapManager *mapManager;
+
+}
 
 @end
 
@@ -17,6 +22,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    mapManager = [[BMKMapManager alloc] init];
+    [mapManager start:@"FD8nSXx2ZUSRsB9ubuFBg8f9" generalDelegate:nil];
     return YES;
 }
 
